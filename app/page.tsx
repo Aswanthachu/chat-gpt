@@ -1,66 +1,61 @@
 import React from "react";
 
-import { SunIcon, ArrowLongRightIcon } from "@heroicons/react/24/outline";
+import {
+  SunIcon,
+  BoltIcon,
+  ExclamationTriangleIcon,
+} from "@heroicons/react/24/outline";
 
 const HomePage = () => {
   return (
-    <section className="w-full h-screen flex justify-center items-center flex-col space-y-5">
-      <h1 className="text-5xl font-semibold mb-20">ChatGpt</h1>
-      <div className="flex gap-6">
-        <div className="flex justify-center items-center flex-col space-y-5">
+    <section className="w-full h-screen flex justify-center items-center flex-col space-y-5 ">
+      <h1 className="w-full text-center text-5xl font-semibold mb-32">
+        ChatGpt
+      </h1>
+      <div className="flex justify-evenly gap-4 items-start w-full flex-wrap">
+        <div className="flex justify-center items-center flex-col space-y-5 ">
           <SunIcon className="h-8 w-8 text-white" />
 
-          <p className="text-2xl">Examples</p>
+          <p className="text-lg lg:text-2xl">Examples</p>
 
-          <button className="gap-1 px-8 py-5 bg-white/5 hover:bg-gray-900 rounded-lg text-center  text-lg cursor-pointer w-[350px]">
-            <p>
-              {`"Explain quantum computing in simple terms"`}
-              <ArrowLongRightIcon className="w-4" />
-            </p>
+          <button className="gap-1 px-8 py-5 bg-white/5 hover:bg-gray-900 rounded-lg text-center  text-md lg:text-lg  cursor-pointer lg:max-w-[350px]">
+            <p className="">{`"Explain quantum computing in simple terms"`}→</p>
           </button>
-          <button className="flex gap-1 px-8 py-5 bg-white/5 hover:bg-gray-900 rounded-lg text-center items-center text-lg cursor-pointer">
-            {`"Got any creative ideas for a 10 year old’s birthday?"`}
-            <ArrowLongRightIcon className="w-4" />
+          <button className="gap-1 px-8 py-5 bg-white/5 hover:bg-gray-900 rounded-lg text-center items-center text-md lg:text-lg cursor-pointer lg:max-w-[350px]">
+            {`"Got any creative ideas for a 10 year old’s birthday?"`}→
           </button>
-          <button className="flex gap-1 px-8 py-5 bg-white/5 hover:bg-gray-900 rounded-lg text-center items-center text-lg cursor-pointer">
-            {`"How do I make an HTTP request in Javascript?"`}
-            <ArrowLongRightIcon className="w-4" />
+          <button className=" gap-1 px-8 py-5 bg-white/5 hover:bg-gray-900 rounded-lg text-center items-center text-md lg:text-lg cursor-pointer lg:max-w-[350px]">
+            {`"How do I make an HTTP request in Javascript?"`}→
           </button>
         </div>
         <div className="flex justify-center items-center flex-col space-y-5">
-          <SunIcon className="h-8 w-8 text-white" />
+          <BoltIcon className="h-8 w-8 text-white" />
 
-          <p className="text-2xl">Examples</p>
+          <p className="text-lg lg:text-2xl">Capabilities</p>
 
-          <div className="flex gap-1 px-8 py-5 bg-white/5 rounded-lg text-center items-center text-lg ">
-            {`"Explain quantum computing in simple terms"`}
-            <ArrowLongRightIcon className="w-4" />
+          <div className="flex gap-1 px-8 py-5 bg-white/5 rounded-lg text-center items-center text-md lg:text-lg lg:max-w-[350px]">
+            {`"Remembers what user said earlier in the conversation"`}
           </div>
-          <div className="flex gap-1 px-8 py-5 bg-white/5 rounded-lg text-center items-center text-lg ">
-            {`"Explain quantum computing in simple terms"`}
-            <ArrowLongRightIcon className="w-4" />
+          <div className="flex gap-1 px-8 py-5 bg-white/5 rounded-lg text-center items-center text-md lg:text-lg lg:max-w-[350px]">
+            {`"Allows user to provide follow-up corrections"`}
           </div>
-          <div className="flex gap-1 px-8 py-5 bg-white/5 rounded-lg text-center items-center text-lg ">
-            {`"Explain quantum computing in simple terms"`}
-            <ArrowLongRightIcon className="w-4" />
+          <div className="flex gap-1 px-8 py-5 bg-white/5 rounded-lg text-center items-center text-md lg:text-lg lg:max-w-[350px]">
+            {`"Trained to decline inappropriate requests"`}
           </div>
         </div>
         <div className="flex justify-center items-center flex-col space-y-5">
-          <SunIcon className="h-8 w-8 text-white" />
-          {/* SunIcon */}
-          <p className="text-2xl">Examples</p>
+          <ExclamationTriangleIcon className="h-8 w-8 text-white" />
 
-          <div className="flex gap-1 px-8 py-5 bg-white/5 rounded-lg text-center items-center text-lg ">
-            {`"Explain quantum computing in simple terms"`}
-            <ArrowLongRightIcon className="w-4" />
+          <p className="text-lg lg:text-2xl">Limitations</p>
+
+          <div className="flex gap-1 px-8 py-5 bg-white/5 rounded-lg text-center items-center text-md lg:text-lg lg:max-w-[350px]">
+            {`"May occasionally generate incorrect information"`}
           </div>
-          <div className="flex gap-1 px-8 py-5 bg-white/5 rounded-lg text-center items-center text-lg ">
-            {`"Explain quantum computing in simple terms"`}
-            <ArrowLongRightIcon className="w-4" />
+          <div className="flex gap-1 px-8 py-5 bg-white/5 rounded-lg text-center items-center text-md lg:text-lg lg:max-w-[350px]">
+            {`"May occasionally produce harmful instructions or biased content"`}
           </div>
-          <div className="flex gap-1 px-8 py-5 bg-white/5 rounded-lg text-center items-center text-lg ">
-            {`"Explain quantum computing in simple terms"`}
-            <ArrowLongRightIcon className="w-4" />
+          <div className="flex gap-1 px-8 py-5 bg-white/5 rounded-lg text-center items-center text-md lg:text-lg lg:max-w-[350px]">
+            {`"Limited knowledge of world and events after 2021"`}
           </div>
         </div>
       </div>
