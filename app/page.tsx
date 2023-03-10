@@ -10,10 +10,10 @@ const HomePage = () => {
   return (
     <section className="w-full min-h-screen flex justify-center items-center flex-col space-y-5 px-3 py-12 ">
       <h1 className="w-full text-center text-5xl font-semibold m-10 lg:mb-32 ">
-        ChatGpt
+        ChatGPT
       </h1>
       <div className="flex justify-evenly gap-4 items-start w-full flex-wrap space-y-16 lg:space-y-0">
-        <div className="flex justify-center items-center flex-col space-y-5 ">
+        <div className="flex justify-center items-center flex-col space-y-5">
           <SunIcon className="h-8 w-8 text-white" />
 
           <p className="text-lg lg:text-2xl">Examples</p>
