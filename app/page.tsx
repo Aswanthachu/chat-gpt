@@ -18,13 +18,13 @@ const HomePage = () => {
 
           <p className="text-lg lg:text-2xl">Examples</p>
 
-          <button className="gap-1 px-8 py-5 bg-white/5 hover:bg-gray-900 rounded-lg text-center  text-md lg:text-lg  cursor-pointer md:min-w-[550px] lg:min-w-[350px] lg:max-w-[350px]">
+          <button className="infoText hover:bg-gray-900 cursor-pointer">
             <p className="">{`"Explain quantum computing in simple terms"`}→</p>
           </button>
-          <button className="gap-1 px-8 py-5 bg-white/5 hover:bg-gray-900 rounded-lg text-center items-center text-md lg:text-lg cursor-pointer md:min-w-[550px] lg:min-w-[350px] lg:max-w-[350px]">
+          <button className="infoText hover:bg-gray-900 cursor-pointer">
             {`"Got any creative ideas for a 10 year old’s birthday?"`}→
           </button>
-          <button className=" gap-1 px-8 py-5 bg-white/5 hover:bg-gray-900 rounded-lg text-center items-center text-md lg:text-lg cursor-pointer md:min-w-[550px] lg:min-w-[350px] lg:max-w-[350px]">
+          <button className="infoText hover:bg-gray-900 cursor-pointer">
             {`"How do I make an HTTP request in Javascript?"`}→
           </button>
         </div>
