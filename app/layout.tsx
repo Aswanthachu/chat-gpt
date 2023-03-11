@@ -1,10 +1,11 @@
 import SideBar from "../components/SideBar";
 import SessionProvider from "../components/SessionProvider";
+import Login from "../components/Login";
 import { getServerSession } from "next-auth";
 import "../styles/globals.css";
 import { authOptions } from "../pages/api/auth/[...nextauth]";
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -14,13 +15,17 @@ export default function RootLayout({
     <html>
       <head />
       <body>
-        <SessionProvider session={getServerSession}>
-          <div className="flex">
-            <SideBar />
+        <SessionProvider session={session}>
+          {!session ? (
+            <Login />
+          ) : (
+            <div className="flex">
+              <SideBar />
 
-            {/* ClientProvider - Notification */}
-            <div className="flex-1 bg-[#343541] text-white">{children}</div>
-          </div>
+              {/* ClientProvider - Notification */}
+              <div className="flex-1 bg-[#343541] text-white">{children}</div>
+            </div>
+          )}
         </SessionProvider>
       </body>
     </html>
