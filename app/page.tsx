@@ -8,7 +8,7 @@ import {
 
 const HomePage = () => {
   return (
-    <section className="w-full min-h-screen flex justify-center items-center flex-col space-y-5 px-3 py-12 ">
+    <section className="w-full h-screen flex justify-center items-center flex-col space-y-5 px-3 py-12 ">
       <h1 className="w-full text-center text-5xl font-semibold m-10 lg:mb-32 ">
         ChatGPT
       </h1>
