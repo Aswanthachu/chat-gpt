@@ -1,4 +1,4 @@
-import Chat from "../../../components/ChatInput";
+import Chat from "../../../components/Chat";
 import ChatInput from "../../../components/ChatInput";
 
 type Props = {
@@ -9,7 +9,7 @@ type Props = {
 
 const chatPage = ({ params: { id } }: Props) => {
   return (
-    <div className="flex flex-col h-screen overflow-hidden">
+    <div className="flex flex-col h-screen overflow-hidden justify-between w-full py-10">
       <Chat chatId={id} />
       <ChatInput chatId={id} />
     </div>
