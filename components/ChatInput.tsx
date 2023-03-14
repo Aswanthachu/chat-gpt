@@ -2,6 +2,7 @@
 import { PaperAirplaneIcon } from "@heroicons/react/24/solid";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { useSession } from "next-auth/react";
+import toast from "react-hot-toast";
 import { FormEvent, useState } from "react";
 import { db } from "../firebase";
 
@@ -12,6 +13,8 @@ type Props = {
 const ChatInput = ({ chatId }: Props) => {
   const { data: session } = useSession();
   const [question, setQuestion] = useState("");
+
+  const model = "davinci";
 
   const sendMessage = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -45,7 +48,24 @@ const ChatInput = ({ chatId }: Props) => {
       message
     );
 
-    await fetch('api/askQuestion')
+    const notification = toast.loading("ChatGPT is Thinking...");
+
+    await fetch("api/askQuestion", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        prompt: input,
+        chatId,
+        model,
+        session,
+      })
+    }).then(() => {
+        toast.success('ChatGPT is responded.',{
+          id:notification,
+        })
+    });
   };
 
   return (
